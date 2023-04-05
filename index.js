@@ -44,10 +44,10 @@ inquirer
     }
     shape.setColor(shapeColor);
     const svg = new SVG();
-    // with svg, call setText and setShape method
+    
     svg.setText(characters, textColor);
     svg.setShape(shape);
-    // console.log(svg);
+    
     return writeFile("./logo/logo.svg", svg.render())
       .then(() => {
         console.log("Generated logo.svg");
