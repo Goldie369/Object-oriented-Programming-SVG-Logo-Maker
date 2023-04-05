@@ -1,16 +1,15 @@
 const inquirer = require("inquirer");
-const fs = require ('fs'); 
 const { Circle, Triangle, Square } = require("./lib/shape");
 const SVG = require("./lib/svg");
 
-// Node promises module
+
 const { writeFile } = require("fs").promises;
 
 inquirer
   .prompt([
     {
       type: "input",
-      message: "Enter Text for the Logo. (Must not be more than 3 characters)?",
+      message: "Enter Text for the Logo. (Must not be more than 3 characters?",
       name: "characters",
     },
     {
@@ -22,7 +21,7 @@ inquirer
       type: "list",
       message: "Select a shape for the Logo?",
       name: "shapeType",
-      choices: ["Circle", "Triangle", "Square"],
+      choices: ["circle", "triangle", "square"],
     },
     {
       type: "input",
