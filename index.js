@@ -64,3 +64,43 @@ function Text(response) {
     else {
         return "Please enter a valid colour value ";
     }
+
+    function writeToFile(fileName, data) {
+         
+        fs.writeFile(fileName, data, (err) => 
+        
+        err ? console.log(err) : console.log("Generated logo.svg"))
+}
+
+function shapeChoice(response) {
+
+    switch (response.shape) {
+        case 'circle':
+            const circle = new Circle(response.logo, response.textcolor, response.shapecolor);
+            writeToFile('./logo/logo.svg', circle.render()) // the object's render() method is triggered, writing out the logo as a SVG file in the logoSAMPLE folder.
+            break; 
+
+        case 'triangle':
+            const triangle = new Triangle(response.logo, response.textcolor, response.shapecolor);
+            writeToFile('./logo/logo.svg', triangle.render())
+            break;
+
+        case 'square':
+            const square = new Square(response.logo, response.textcolor, response.shapecolor);
+            writeToFile('./logo/logo.svg', square.render())
+            break;
+    }
+}
+
+
+function init() {
+     
+    inquirer.prompt(questions)
+        .then((response) => { 
+            validHexaCode(response);
+            shapeChoice(response); 
+        })
+}
+
+
+init();
