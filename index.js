@@ -1,3 +1,7 @@
+//-- Adding a inquirer package to prompt the user for input--//
+//-- Adding Circle, Triangle, and Square, from a module located at ./lib/shape.js, which are likely classes representing those shapes--//
+//-- Adding SVG from a module located at ./lib/svg.js which will generate the SVG file--//
+
 const inquirer = require("inquirer");
 const { Circle, Triangle, Square } = require("./lib/shape");
 const SVG = require("./lib/svg");
