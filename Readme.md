@@ -33,8 +33,9 @@ Please contact me if you would like to contribute. You can find my information u
 
 To test that the program is running successfully, input 'npm run test' in the terminal. This  will test the Shape, Triangle, Square and Circle classes. 
 
-## ![Logo](./)
+## ![Logo](./Examples/Screen%20Shot%202023-04-06%20at%206.18.53%20PM.png)
 
+## ![Logo](./Examples/Screen%20Shot%202023-04-06%20at%206.31.26%20PM.png)
 
 ## Credits 
 
